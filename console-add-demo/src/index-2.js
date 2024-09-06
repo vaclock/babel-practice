@@ -2,8 +2,8 @@ const parser = require('@babel/parser')
 const traverser = require('@babel/traverse').default
 const generate = require('@babel/generator').default
 const types = require('@babel/types')
+const template = require('@babel/template').default
 
-// const sourceCode = `console.log(1)`
 const sourceCode = `
     console.log(1);
 
@@ -28,21 +28,20 @@ const ast = parser.parse(sourceCode, {
 const targetCalleeName = ['log', 'info', 'warn', 'error'].map(item => `console.${item}`)
 traverser(ast, {
   CallExpression(path, state) {
-    // console.log(path)
-    // if (types.isMemberExpression(path.node.callee)
-    //   // && types.isIdentifier(path.node.callee.property, { name: 'log' })
-    // && path.node.callee.object.name === 'console'
-    // && ['log', 'info', 'warn', 'error'].includes(path.node.callee.property.name)
-    // ) {
-    //   const {line, column} = path.node.loc.start;
-    //   path.node.arguments.unshift(types.stringLiteral(`add: [${line}:${column}]`))
-    // }
-
-    const calleeName = generate(path.node.callee);
-    // const calleeName = path.get('callee').toString()
+    if (path.node.isNew) return
+    const calleeName = generate(path.node.callee).code;
     if (targetCalleeName.includes(calleeName)) {
       const {line, column} = path.node.loc.start;
-      path.node.arguments.unshift(types.stringLiteral(`add: [${line}:${column}]`))
+      const newNode = template.expression(`console.log("filename: (${line}, ${column})")`)()
+      // const newNode = template.expression(`console.log("filename: (${line}, ${column})")`)();
+      newNode.isNew = true
+
+      if (path.findParent(path => path.isJSXElement())) {
+        path.replaceWith(types.arrayExpression([newNode, path.node]));
+        path.skip()
+      } else {
+        path.insertBefore(newNode);
+      }
     }
   }
 })
