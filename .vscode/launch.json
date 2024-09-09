@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/console-add-demo/src/index-2.js",
+      "program": "${workspaceFolder}/acorn-parse/src/index.js",
       "outFiles": [
         "${workspaceFolder}/**/*.js"
       ]
