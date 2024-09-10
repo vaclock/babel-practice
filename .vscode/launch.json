@@ -27,6 +27,18 @@
       // "outFiles": [
       //   "${workspaceFolder}/**/*.js"
       // ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "html解析",
+      // "skipFiles": [
+      //   "<node_internals>/**"
+      // ],
+      "program": "${workspaceFolder}/html-parse/src/index.js",
+      // "outFiles": [
+      //   "${workspaceFolder}/**/*.js"
+      // ]
     }
   ]
 }
