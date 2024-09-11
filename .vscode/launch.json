@@ -8,13 +8,37 @@
       "type": "node",
       "request": "launch",
       "name": "启动程序",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
+      // "skipFiles": [
+      //   "<node_internals>/**"
+      // ],
       "program": "${workspaceFolder}/acorn-parse/src/index.js",
-      "outFiles": [
-        "${workspaceFolder}/**/*.js"
-      ]
+      // "outFiles": [
+      //   "${workspaceFolder}/**/*.js"
+      // ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "函数插桩",
+      // "skipFiles": [
+      //   "<node_internals>/**"
+      // ],
+      "program": "${workspaceFolder}/auto-track/src/index.js",
+      // "outFiles": [
+      //   "${workspaceFolder}/**/*.js"
+      // ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "html解析",
+      // "skipFiles": [
+      //   "<node_internals>/**"
+      // ],
+      "program": "${workspaceFolder}/html-parse/src/index.js",
+      // "outFiles": [
+      //   "${workspaceFolder}/**/*.js"
+      // ]
     }
   ]
 }
