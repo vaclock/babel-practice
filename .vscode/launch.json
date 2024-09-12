@@ -39,6 +39,18 @@
       // "outFiles": [
       //   "${workspaceFolder}/**/*.js"
       // ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "js-parser",
+      // "skipFiles": [
+      //   "<node_internals>/**"
+      // ],
+      "program": "${workspaceFolder}/js-parser-js/src/index.js",
+      // "outFiles": [
+      //   "${workspaceFolder}/**/*.js"
+      // ]
     }
   ]
 }
