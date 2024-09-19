@@ -1,0 +1,1 @@
+export * as testName from '../components/b'

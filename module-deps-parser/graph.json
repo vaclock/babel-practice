@@ -1,0 +1,143 @@
+{
+  "root": {
+    "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/index.js",
+    "imports": {
+      "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/A.js": [
+        {
+          "type": "default",
+          "local": "A"
+        }
+      ],
+      "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/B.js": [
+        {
+          "type": "default",
+          "local": "func"
+        },
+        {
+          "type": "deconstruct",
+          "imported": "testE",
+          "local": "testE"
+        },
+        {
+          "type": "deconstruct",
+          "imported": "testC",
+          "local": "C"
+        }
+      ]
+    },
+    "exports": [],
+    "subModules": {},
+    "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/A.js": {
+      "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/A.js",
+      "imports": {
+        "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js": [
+          {
+            "type": "default",
+            "local": "A"
+          }
+        ]
+      },
+      "exports": [],
+      "subModules": {},
+      "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js": {
+        "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js",
+        "imports": {},
+        "exports": [],
+        "subModules": {}
+      }
+    },
+    "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/B.js": {
+      "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/B.js",
+      "imports": {},
+      "exports": [],
+      "subModules": {}
+    }
+  },
+  "allModules": {
+    "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js": {
+      "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js",
+      "imports": {},
+      "exports": [],
+      "subModules": {}
+    },
+    "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/A.js": {
+      "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/A.js",
+      "imports": {
+        "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js": [
+          {
+            "type": "default",
+            "local": "A"
+          }
+        ]
+      },
+      "exports": [],
+      "subModules": {},
+      "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js": {
+        "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js",
+        "imports": {},
+        "exports": [],
+        "subModules": {}
+      }
+    },
+    "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/B.js": {
+      "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/B.js",
+      "imports": {},
+      "exports": [],
+      "subModules": {}
+    },
+    "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/index.js": {
+      "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/index.js",
+      "imports": {
+        "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/A.js": [
+          {
+            "type": "default",
+            "local": "A"
+          }
+        ],
+        "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/B.js": [
+          {
+            "type": "default",
+            "local": "func"
+          },
+          {
+            "type": "deconstruct",
+            "imported": "testE",
+            "local": "testE"
+          },
+          {
+            "type": "deconstruct",
+            "imported": "testC",
+            "local": "C"
+          }
+        ]
+      },
+      "exports": [],
+      "subModules": {},
+      "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/A.js": {
+        "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/A.js",
+        "imports": {
+          "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js": [
+            {
+              "type": "default",
+              "local": "A"
+            }
+          ]
+        },
+        "exports": [],
+        "subModules": {},
+        "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js": {
+          "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/components/a.js",
+          "imports": {},
+          "exports": [],
+          "subModules": {}
+        }
+      },
+      "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/B.js": {
+        "path": "/Users/eastbuy/Desktop/babel/module-deps-parser/test-pro/pages/B.js",
+        "imports": {},
+        "exports": [],
+        "subModules": {}
+      }
+    }
+  }
+}
