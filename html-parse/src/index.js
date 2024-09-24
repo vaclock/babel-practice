@@ -4,7 +4,7 @@ const parser = require('posthtml-parser')
 
 const html = `
   <component>
-    <title style="font-size: 12px;">Super Title</title>
+    <title style="font-size: ">Super Title</title>
     <text>Awesome Text</text>
   </component>
 `

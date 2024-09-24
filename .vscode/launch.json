@@ -51,6 +51,18 @@
       // "outFiles": [
       //   "${workspaceFolder}/**/*.js"
       // ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "module-deps-parser",
+      // "skipFiles": [
+      //   "<node_internals>/**"
+      // ],
+      "program": "${workspaceFolder}/module-deps-parser/src/index.js",
+      // "outFiles": [
+      //   "${workspaceFolder}/**/*.js"
+      // ]
     }
   ]
 }
